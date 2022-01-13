@@ -3,10 +3,19 @@ import { Filter } from './components/Filter/Filter';
 
 export default function App() {
   return (
-    <div>
+    <div style={{ display: 'flex' }}>
       <GlobalStyle />
-      <Filter isOpen />
-      <GlobalStyle />
+      <Filter
+        isOpen
+        searchable
+        options={[
+          { value: 'xs', label: 'Очень маленький' },
+          { value: 'sm', label: 'Маленький' },
+          { value: 'md', label: 'Средний' },
+          { value: 'lg', label: 'Большой' },
+          { value: 'xl', label: 'Очень большой' },
+        ]}
+      />
     </div>
   );
 }
